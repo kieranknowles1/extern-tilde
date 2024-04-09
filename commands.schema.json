@@ -1,0 +1,49 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "array",
+    "items": {
+        "type": "array",
+        "prefixItems": [
+            {
+                "type": "string",
+                "description": "The search query to trigger the command"
+            },
+            {
+                "$ref": "#/definitions/CommandValue"
+            }
+        ],
+        "items": false
+    },
+    "definitions": {
+        "CommandValue": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string"
+                },
+                "searchTemplate": {
+                    "type": "string",
+                    "description": "The template suffix to append when searching via {shortcut} {query}. Use {} as a placeholder for the query.",
+                    "pattern": ".*\\{\\}.*",
+                    "examples": [
+                        "/search?q={}"
+                    ]
+                },
+                "suggestions": {
+                    "type": "array",
+                    "description": "A list of suggested suffixes/searches for the URL",
+                    "items": {
+                        "type": "string"
+                    },
+                    "examples": [
+                        "r/r/selfhosted"
+                    ]
+                }
+            },
+            "additionalProperties": false
+        }
+    }
+}

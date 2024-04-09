@@ -1,0 +1,10 @@
+{
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "commands.json"
+            ],
+            "url": "./commands.schema.json"
+        }
+    ]
+}
