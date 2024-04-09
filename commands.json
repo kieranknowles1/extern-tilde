@@ -38,6 +38,7 @@
         "g",
         {
             "name": "GitHub",
+            "icon": "github-light",
             "url": "https://github.com"
         }
     ],

@@ -24,6 +24,13 @@
                 "url": {
                     "type": "string"
                 },
+                "icon": {
+                    "type": "string",
+                    "description": "The icon from https://github.com/walkxcode/dashboard-icons to use for the command",
+                    "examples": [
+                        "github"
+                    ]
+                },
                 "searchTemplate": {
                     "type": "string",
                     "description": "The template suffix to append when searching via {shortcut} {query}. Use {} as a placeholder for the query.",
@@ -43,6 +50,10 @@
                     ]
                 }
             },
+            "required": [
+                "name",
+                "url"
+            ],
             "additionalProperties": false
         }
     }

@@ -90,6 +90,12 @@
       transition: color var(--transition-speed);
     }
 
+    .icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-left: auto;
+    }
+
     .command:where(:focus, :hover) .name {
       color: var(--color-text);
     }
@@ -117,6 +123,7 @@
     <a class="command" rel="noopener noreferrer">
       <span class="key"></span>
       <span class="name"></span>
+      <img class="icon">
     </a>
   </li>
 </template>
@@ -132,7 +139,7 @@
       const commandTemplate = document.getElementById('command-template');
 
       COMMANDS_ASYNC.then(result => {
-        for (const [key, { name, url }] of COMMANDS.entries()) {
+        for (const [key, { name, url, icon }] of COMMANDS.entries()) {
           if (!name || !url) continue;
           const clone = commandTemplate.content.cloneNode(true);
           const command = clone.querySelector('.command');
@@ -140,6 +147,11 @@
           if (CONFIG.openLinksInNewTab) command.target = '_blank';
           clone.querySelector('.key').innerText = key;
           clone.querySelector('.name').innerText = name;
+          if (icon) {
+            clone.querySelector('.icon').src = `https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/${icon}.png`;
+          } else {
+            clone.querySelector('.icon').remove();
+          }
           commands.append(clone);
         }
       })
