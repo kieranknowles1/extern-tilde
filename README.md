@@ -36,6 +36,15 @@ e.g. `example.com` <kbd>Enter</kbd> will redirect you to
 
 Tilde is meant to be customized&mdash;[make it yours!](index.html)
 
+### My Changes
+
+I have made the following changes to the original Tilde, feel free to port them to your fork:
+- Commands are fetched from `commands.json` instead of being hardcoded in `index.html`
+- Added an optional `icon` field to commands, which refers to an PNG from [dashboard-icons](https://github.com/walkxcode/dashboard-icons)
+  - TODO: I would like to show these on the left of the command name, with a constant size.
+- Highlight shortcuts in the command name instead of alongside it
+  - This means that, for example, the command named Minecraft with shortcut `mc` will be displayed as **M**ine**c**raft
+
 ## License
 
 Use and modify Tilde [as you see fit](UNLICENSE).
