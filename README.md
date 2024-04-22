@@ -2,6 +2,8 @@
 
 Tilde is a minimal browser homepage for pro web surfers.
 
+![Preview](./media/preview.png)
+
 ## Usage
 
 **To go to a site**, type the corresponding key and press <kbd>Enter</kbd>.
