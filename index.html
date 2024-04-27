@@ -90,9 +90,9 @@
     }
 
     .icon {
-      width: auto;
       height: 1.4rem;
-      margin-left: auto;
+      width: 1.4rem;
+      object-fit: scale-down;
     }
 
     .command:where(:focus, :hover) .name {
@@ -120,8 +120,8 @@
 <template id="command-template">
   <li>
     <a class="command" rel="noopener noreferrer">
-      <span class="name"></span>
       <img class="icon">
+      <span class="name"></span>
     </a>
   </li>
 </template>

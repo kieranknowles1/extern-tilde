@@ -43,7 +43,7 @@ Tilde is meant to be customized&mdash;[make it yours!](index.html)
 I have made the following changes to the original Tilde, feel free to port them to your fork:
 - Commands are fetched from `commands.json` instead of being hardcoded in `index.html`
 - Added an optional `icon` field to commands, which refers to an PNG from [dashboard-icons](https://github.com/walkxcode/dashboard-icons)
-  - TODO: I would like to show these on the left of the command name, with a constant size.
+  - This is shown on the left, replacing the shortcut
 - Highlight shortcuts in the command name instead of alongside it
   - This means that, for example, the command named Minecraft with shortcut `mc` will be displayed as **M**ine**c**raft
 
